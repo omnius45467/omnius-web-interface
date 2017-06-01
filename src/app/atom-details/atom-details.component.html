@@ -1,0 +1,27 @@
+<section *ngIf="atom">
+  <!-- description -->
+  <section *ngFor="let a of atom">
+    <h2>You selected: {{a.id}}</h2>
+    <h3>Description: </h3>
+    <p>
+      {{a.name}}
+    </p>
+  </section>
+
+  <!-- form -->
+  <!-- <section>
+    <form (ngSubmit)="saveAtomDetails()" #personForm="ngForm">
+      <div>
+        <label for="name">Name: </label>
+        <input type="text" name="name" [(ngModel)]="person.name" required #name="ngModel">
+        <div [hidden]="name.valid || name.pristine" class="error">
+            Name is required my good sir/lady!
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="!personForm.form.valid">Save</button>
+    </form>
+  </section> -->
+
+  <button (click)="gotoAtomsList()">Back to atoms list</button>
+<section>
